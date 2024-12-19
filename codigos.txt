@@ -1,1 +1,1 @@
-npm test -- tests/M5T10.test.js
+npm test -- tests/M5T33.test.js
