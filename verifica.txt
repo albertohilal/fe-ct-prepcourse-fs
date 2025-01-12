@@ -1,4 +1,6 @@
-npm test -- tests/M7T33.test.js
+npm test -- tests/M8CT6.test.js
+
+M8CT6.test
 
 98379
 

@@ -1,7 +1,13 @@
+var arrayOfStrings = [
+  "acordeon",
+  "guitarra",
+  "flauta",
+  "armonica",
+  "bateria",
+  "arpa",
+];
+
 function filter(arrayOfStrings) {
-  // Debes identificar todos los elementos el arreglo que comiencen con la letra "a".
-  // Luego retorna un nuevo arreglo con estos elementos.
-  // Tu código:
   var nuevoArreglo = [];
 
   for (var i = 0; i < arrayOfStrings.length; i++) {
@@ -12,5 +18,4 @@ function filter(arrayOfStrings) {
   }
   return nuevoArreglo;
 }
-
-module.exports = filter;
+console.log(filter(arrayOfStrings));

@@ -1,3 +1,9 @@
+var array = ["carlos", "viviana", "federico", "nacho"];
+
+var cb = function (elemento) {
+  return elemento.toUpperCase();
+};
+
 function map(array, cb) {
   // Itera sobre el arreglo y por cada elemento, pasárselo como argumento al callback.
   // Tiene que guardar el resultado devuelto por el callback en cada elemento dentro de un nuevo arreglo.
@@ -9,5 +15,4 @@ function map(array, cb) {
   }
   return nuevoArray;
 }
-
-module.exports = map;
+console.log(map(array, cb));
