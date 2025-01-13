@@ -1,8 +1,15 @@
+const usuario = {
+  nombre: "Alberto",
+  apellido: "Hilal",
+  correo: "albertohilal@gmail.com",
+};
+
 function verificarPropiedad(objeto, propiedad) {
   // Verifica si el objeto posee la propiedad recibida.
   // Retorna true si la tiene, sino retorna false.
   // PISTA: puedes usar el método hasOwnProperty().
   // Tu código:
+
   if (objeto.hasOwnProperty(propiedad) === true) {
     return true;
   } else {
@@ -10,4 +17,4 @@ function verificarPropiedad(objeto, propiedad) {
   }
 }
 
-module.exports = verificarPropiedad;
+console.log(verificarPropiedad(usuario, "edad"));

@@ -1,3 +1,9 @@
+const usuario = {
+  nombre: "Alberto",
+  apellido: "Hilal",
+  correo: "albertohilal@gmail.com",
+};
+
 const contarPropiedades = (objeto) => {
   // Cuenta y retorna el total de propiedades que tiene el objeto.
   // PISTA: Puedes iterarlo usando el bucle for-in.
@@ -9,5 +15,4 @@ const contarPropiedades = (objeto) => {
 
   return contador;
 };
-
-module.exports = contarPropiedades;
+console.log(contarPropiedades(usuario));
