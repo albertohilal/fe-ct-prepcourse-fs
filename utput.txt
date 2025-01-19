@@ -1,0 +1,262 @@
+[1mdiff --git a/C8 Objects + Callbacks/objects/ejercicios/02.js b/C8 Objects + Callbacks/objects/ejercicios/02.js[m
+[1mindex fd81338..774b9e7 100644[m
+[1m--- a/C8 Objects + Callbacks/objects/ejercicios/02.js[m	
+[1m+++ b/C8 Objects + Callbacks/objects/ejercicios/02.js[m	
+[36m@@ -1,9 +1,9 @@[m
+ function actualizarValorPropiedad(objeto, propiedad, valor) {[m
+[31m-   // Actualiza el valor de la propiedad del objeto recibidos en la función.[m
+[31m-   // Retorna el objeto actualizado.[m
+[31m-   // Tu código:[m
+[31m-   objeto[propiedad] = valor;[m
+[31m-   return objeto;[m
+[32m+[m[32m  // Actualiza el valor de la propiedad del objeto recibidos en la función.[m
+[32m+[m[32m  // Retorna el objeto actualizado.[m
+[32m+[m[32m  // Tu código:[m
+[32m+[m[32m  objeto[propiedad] = valor;[m
+[32m+[m[32m  return objeto;[m
+ }[m
+ [m
+ module.exports = actualizarValorPropiedad;[m
+[1mdiff --git a/C8 Objects + Callbacks/objects/ejercicios/03.js b/C8 Objects + Callbacks/objects/ejercicios/03.js[m
+[1mindex 9705c17..76ef426 100644[m
+[1m--- a/C8 Objects + Callbacks/objects/ejercicios/03.js[m	
+[1m+++ b/C8 Objects + Callbacks/objects/ejercicios/03.js[m	
+[36m@@ -1,6 +1,8 @@[m
+ const agregarNuevaPropiedad = (objeto, propiedad, valor) => {[m
+   // Añade una nueva propiedad al objeto con su respectivo valor pasado por la función.[m
+   // Tu código:[m
+[32m+[m[32m  objeto[propiedad] = valor;[m
+[32m+[m[32m  return objeto;[m
+ };[m
+ [m
+ module.exports = agregarNuevaPropiedad;[m
+[1mdiff --git a/C8 Objects + Callbacks/objects/ejercicios/04.js b/C8 Objects + Callbacks/objects/ejercicios/04.js[m
+[1mindex 8dbc773..b5db75a 100644[m
+[1m--- a/C8 Objects + Callbacks/objects/ejercicios/04.js[m	
+[1m+++ b/C8 Objects + Callbacks/objects/ejercicios/04.js[m	
+[36m@@ -1,8 +1,13 @@[m
+ function verificarPropiedad(objeto, propiedad) {[m
+[31m-   // Verifica si el objeto posee la propiedad recibida.[m
+[31m-   // Retorna true si la tiene, sino retorna false.[m
+[31m-   // PISTA: puedes usar el método hasOwnProperty().[m
+[31m-   // Tu código:[m
+[32m+[m[32m  // Verifica si el objeto posee la propiedad recibida.[m
+[32m+[m[32m  // Retorna true si la tiene, sino retorna false.[m
+[32m+[m[32m  // PISTA: puedes usar el método hasOwnProperty().[m
+[32m+[m[32m  // Tu código:[m
+[32m+[m[32m  if (objeto.hasOwnProperty(propiedad) === true) {[m
+[32m+[m[32m    return true;[m
+[32m+[m[32m  } else {[m
+[32m+[m[32m    return false;[m
+[32m+[m[32m  }[m
+ }[m
+ [m
+ module.exports = verificarPropiedad;[m
+[1mdiff --git a/C8 Objects + Callbacks/objects/ejercicios/05.js b/C8 Objects + Callbacks/objects/ejercicios/05.js[m
+[1mindex 5748592..8ff3b0b 100644[m
+[1m--- a/C8 Objects + Callbacks/objects/ejercicios/05.js[m	
+[1m+++ b/C8 Objects + Callbacks/objects/ejercicios/05.js[m	
+[36m@@ -2,6 +2,9 @@[m [mconst listarPropiedades = (objeto) => {[m
+   // Lista y retorna todas las propiedades que posee el objeto recibido por la función.[m
+   // PISTA: Puedes usar el método Object.keys().[m
+   // Tu código:[m
+[32m+[m[32m  var propiedades = Object.keys(objeto);[m
+[32m+[m
+[32m+[m[32m  return propiedades;[m
+ };[m
+ [m
+ module.exports = listarPropiedades;[m
+[1mdiff --git a/C8 Objects + Callbacks/objects/ejercicios/06.js b/C8 Objects + Callbacks/objects/ejercicios/06.js[m
+[1mindex da96759..c2b4f60 100644[m
+[1m--- a/C8 Objects + Callbacks/objects/ejercicios/06.js[m	
+[1m+++ b/C8 Objects + Callbacks/objects/ejercicios/06.js[m	
+[36m@@ -2,6 +2,12 @@[m [mconst contarPropiedades = (objeto) => {[m
+   // Cuenta y retorna el total de propiedades que tiene el objeto.[m
+   // PISTA: Puedes iterarlo usando el bucle for-in.[m
+   // Tu código:[m
+[32m+[m[32m  var contador = 0;[m
+[32m+[m[32m  for (const propiedad in objeto) {[m
+[32m+[m[32m    contador++; // Incrementa el contador por cada propiedad[m
+[32m+[m[32m  }[m
+[32m+[m
+[32m+[m[32m  return contador;[m
+ };[m
+ [m
+ module.exports = contarPropiedades;[m
+[1mdiff --git a/C8 Objects + Callbacks/objects/ejercicios/08.js b/C8 Objects + Callbacks/objects/ejercicios/08.js[m
+[1mindex b691525..145ef4d 100644[m
+[1m--- a/C8 Objects + Callbacks/objects/ejercicios/08.js[m	
+[1m+++ b/C8 Objects + Callbacks/objects/ejercicios/08.js[m	
+[36m@@ -5,6 +5,14 @@[m [mfunction crearGato(nombre, edad) {[m
+   // La propiedad "meow" será una función que retorne el string: "Meow!".[m
+   // Retornar el objeto.[m
+   // Tu código:[m
+[31m-}[m
+[32m+[m[32m  for (var i = 0; i < array.length; i++) {[m
+[32m+[m[32m    var resultado = callback(array[i]);[m
+[32m+[m[32m    if (resultado === true) {[m
+[32m+[m[32m      return array[i]; // Retorna el elemento encontrado[m
+[32m+[m[32m    }[m
+[32m+[m[32m  }[m
+[32m+[m[32m  // Si el bucle termina sin encontrar el elemento, retorna el mensaje[m
+[32m+[m[32m  return "No se encontró el elemento";[m
+[32m+[m[32m};[m
+ [m
+ module.exports = crearGato;[m
+[1mdiff --git a/PRUEBAS/Objects/01.js b/PRUEBAS/Objects/01.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..44f85b5[m
+[1m--- /dev/null[m
+[1m+++ b/PRUEBAS/Objects/01.js[m
+[36m@@ -0,0 +1,16 @@[m
+[32m+[m[32mconst usuario = {[m
+[32m+[m[32m  nombre: "Alberto",[m
+[32m+[m[32m  apellido: "Hilal",[m
+[32m+[m[32m  correo: "albertohilal@gmail.com",[m
+[32m+[m[32m};[m
+[32m+[m
+[32m+[m[32mconst obtenerValorPropiedad = (objeto, propiedad) => {[m
+[32m+[m[32m  // Recibe un objeto y el nombre de una propiedad.[m
+[32m+[m[32m  // Devuelve el valor de esta propiedad.[m
+[32m+[m[32m  // Tu código:[m
+[32m+[m[32m  const a = objeto[propiedad];[m
+[32m+[m
+[32m+[m[32m  return a;[m
+[32m+[m[32m};[m
+[32m+[m
+[32m+[m[32mconsole.log(obtenerValorPropiedad(usuario, "apellido"));[m
+[1mdiff --git a/PRUEBAS/Objects/02.js b/PRUEBAS/Objects/02.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..aeb29ec[m
+[1m--- /dev/null[m
+[1m+++ b/PRUEBAS/Objects/02.js[m
+[36m@@ -0,0 +1,16 @@[m
+[32m+[m[32mconst objeto = {[m
+[32m+[m[32m  nombre: "Alberto",[m
+[32m+[m[32m  apellido: "Hilal",[m
+[32m+[m[32m  correo: "albertohilal@gmail.com",[m
+[32m+[m[32m};[m
+[32m+[m
+[32m+[m[32mfunction actualizarValorPropiedad(objeto, propiedad, valor) {[m
+[32m+[m[32m  // Actualiza el valor de la propiedad del objeto recibidos en la función.[m
+[32m+[m[32m  // Retorna el objeto actualizado.[m
+[32m+[m[32m  // Tu código:[m
+[32m+[m[32m  //   usuario["nombre"] = valor;[m
+[32m+[m[32m  //   return usuario;[m
+[32m+[m[32m  objeto["propiedad"] = valor;[m
+[32m+[m[32m  return objeto;[m
+[32m+[m[32m}[m
+[32m+[m[32mconsole.log(actualizarValorPropiedad(objeto, "nombre", "Carlos"));[m
+[1mdiff --git a/PRUEBAS/Objects/03.js b/PRUEBAS/Objects/03.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c281a02[m
+[1m--- /dev/null[m
+[1m+++ b/PRUEBAS/Objects/03.js[m
+[36m@@ -0,0 +1,14 @@[m
+[32m+[m[32mconst usuario = {[m
+[32m+[m[32m  nombre: "Alberto",[m
+[32m+[m[32m  apellido: "Hilal",[m
+[32m+[m[32m  correo: "albertohilal@gmail.com",[m
+[32m+[m[32m};[m
+[32m+[m
+[32m+[m[32mconst agregarNuevaPropiedad = (objeto, propiedad, valor) => {[m
+[32m+[m[32m  // Añade una nueva propiedad al objeto con su respectivo valor pasado por la función.[m
+[32m+[m[32m  // Tu código:[m
+[32m+[m[32m  objeto[propiedad] = valor;[m
+[32m+[m[32m  return objeto;[m
+[32m+[m[32m};[m
+[32m+[m
+[32m+[m[32mconsole.log(agregarNuevaPropiedad(usuario, "edad", 73));[m
+[1mdiff --git a/PRUEBAS/Objects/04.js b/PRUEBAS/Objects/04.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..7e73ea7[m
+[1m--- /dev/null[m
+[1m+++ b/PRUEBAS/Objects/04.js[m
+[36m@@ -0,0 +1,20 @@[m
+[32m+[m[32mconst usuario = {[m
+[32m+[m[32m  nombre: "Alberto",[m
+[32m+[m[32m  apellido: "Hilal",[m
+[32m+[m[32m  correo: "albertohilal@gmail.com",[m
+[32m+[m[32m};[m
+[32m+[m
+[32m+[m[32mfunction verificarPropiedad(objeto, propiedad) {[m
+[32m+[m[32m  // Verifica si el objeto posee la propiedad recibida.[m
+[32m+[m[32m  // Retorna true si la tiene, sino retorna false.[m
+[32m+[m[32m  // PISTA: puedes usar el método hasOwnProperty().[m
+[32m+[m[32m  // Tu código:[m
+[32m+[m
+[32m+[m[32m  if (objeto.hasOwnProperty(propiedad) === true) {[m
+[32m+[m[32m    return true;[m
+[32m+[m[32m  } else {[m
+[32m+[m[32m    return false;[m
+[32m+[m[32m  }[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mconsole.log(verificarPropiedad(usuario, "edad"));[m
+[1mdiff --git a/PRUEBAS/Objects/05.js b/PRUEBAS/Objects/05.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..41d4cc0[m
+[1m--- /dev/null[m
+[1m+++ b/PRUEBAS/Objects/05.js[m
+[36m@@ -0,0 +1,16 @@[m
+[32m+[m[32mconst usuario = {[m
+[32m+[m[32m  nombre: "Alberto",[m
+[32m+[m[32m  apellido: "Hilal",[m
+[32m+[m[32m  correo: "albertohilal@gmail.com",[m
+[32m+[m[32m};[m
+[32m+[m
+[32m+[m[32mconst listarPropiedades = (objeto) => {[m
+[32m+[m[32m  // Lista y retorna todas las propiedades que posee el objeto recibido por la función.[m
+[32m+[m[32m  // PISTA: Puedes usar el método Object.keys().[m
+[32m+[m[32m  // Tu código:[m
+[32m+[m[32m  var propiedades = Object.keys(objeto);[m
+[32m+[m
+[32m+[m[32m  return propiedades;[m
+[32m+[m[32m};[m
+[32m+[m
+[32m+[m[32mconsole.log(listarPropiedades(usuario));[m
+[1mdiff --git a/PRUEBAS/Objects/06.js b/PRUEBAS/Objects/06.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..444f266[m
+[1m--- /dev/null[m
+[1m+++ b/PRUEBAS/Objects/06.js[m
+[36m@@ -0,0 +1,18 @@[m
+[32m+[m[32mconst usuario = {[m
+[32m+[m[32m  nombre: "Alberto",[m
+[32m+[m[32m  apellido: "Hilal",[m
+[32m+[m[32m  correo: "albertohilal@gmail.com",[m
+[32m+[m[32m};[m
+[32m+[m
+[32m+[m[32mconst contarPropiedades = (objeto) => {[m
+[32m+[m[32m  // Cuenta y retorna el total de propiedades que tiene el objeto.[m
+[32m+[m[32m  // PISTA: Puedes iterarlo usando el bucle for-in.[m
+[32m+[m[32m  // Tu código:[m
+[32m+[m[32m  var contador = 0;[m
+[32m+[m[32m  for (const propiedad in objeto) {[m
+[32m+[m[32m    contador++; // Incrementa el contador por cada propiedad[m
+[32m+[m[32m  }[m
+[32m+[m
+[32m+[m[32m  return contador;[m
+[32m+[m[32m};[m
+[32m+[m[32mconsole.log(contarPropiedades(usuario));[m
+[1mdiff --git a/PRUEBAS/Objects/07.js b/PRUEBAS/Objects/07.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f9937be[m
+[1m--- /dev/null[m
+[1m+++ b/PRUEBAS/Objects/07.js[m
+[36m@@ -0,0 +1,14 @@[m
+[32m+[m[32mvar sortBy = 'a';[m
+[32m+[m[32mvar list = [{ a: 1, b: 3 }, { a: 3, b: 2 }, { a: 2, b: 40 }];[m
+[32m+[m
+[32m+[m[32mfunction sort(sortBy, list) {[m
+[32m+[m[32m    // La función sort recibe dos parámetros:[m
+[32m+[m[32m    // sortBy: una letra (string).[m
+[32m+[m[32m    // list: un arreglo de objetos.[m
+[32m+[m[32m    // La función deberá devolver la lista de objetos ordenada de forma DESCENDIENTE[m
+[32m+[m[32m    // a partir de la letra recibida. Por ejemplo:[m
+[32m+[m[32m    // recibes --> ("a", [{ a: 1, b: 3 }, { a: 3, b: 2 }, { a: 2, b: 40 }])[m
+[32m+[m[32m    // retorna --> [{ a: 3, b: 2 }, { a: 2, b: 40 }, { a: 1, b: 3 }][m
+[32m+[m[32m    // Tu código:[m
+[32m+[m[41m    [m
+[32m+[m[32m }[m
+\ No newline at end of file[m
